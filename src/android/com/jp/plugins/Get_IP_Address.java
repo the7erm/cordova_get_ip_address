@@ -69,7 +69,7 @@ public class Get_IP_Address extends CordovaPlugin {
 
             callbackContext.success(ipAddress);
             return true;
-        else  {
+        } else  {
             callbackContext.error("Invalid Selection");
             return false;
         }
