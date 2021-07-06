@@ -26,7 +26,7 @@ public class Get_IP_Address extends CordovaPlugin {
         if(args.equalsIgnoreCase("get_ip_address")) {
 
             try {
-
+                ipAddress = "";
                 for (Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces(); en.hasMoreElements();) {
                     NetworkInterface intf = en.nextElement();
                     for (Enumeration<InetAddress> enumIpAddr = intf.getInetAddresses(); enumIpAddr.hasMoreElements();) {
@@ -46,13 +46,14 @@ public class Get_IP_Address extends CordovaPlugin {
             return true;
         } else if(args.equalsIgnoreCase("get_all_ip_address")) {
             try {
-
+                ipAddress = "";
                 for (Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces(); en.hasMoreElements();) {
                     NetworkInterface intf = en.nextElement();
                     for (Enumeration<InetAddress> enumIpAddr = intf.getInetAddresses(); enumIpAddr.hasMoreElements();) {
                         InetAddress inetAddress = enumIpAddr.nextElement();
                         if (!inetAddress.isLoopbackAddress()) {
                             ip = inetAddress.getHostAddress().toString();
+
                             if (!ipAddress.isEmpty()) {
                                 ipAddress = ipAddress.concat(" ");
                             }
@@ -69,7 +70,7 @@ public class Get_IP_Address extends CordovaPlugin {
             callbackContext.success(ipAddress);
             return true;
         } else {
-            callbackContext.error("Invalid Selection");
+            callbackContext.error("Invalid Selection "+args);
             return false;
         }
 
