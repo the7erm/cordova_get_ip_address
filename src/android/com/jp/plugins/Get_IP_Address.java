@@ -44,8 +44,7 @@ public class Get_IP_Address extends CordovaPlugin {
 
             callbackContext.success(ipAddress);
             return true;
-        }
-        else if(args.equalsIgnoreCase("get_all_ip_address")) {
+        } else if(args.equalsIgnoreCase("get_all_ip_address")) {
             try {
 
                 for (Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces(); en.hasMoreElements();) {
@@ -69,7 +68,7 @@ public class Get_IP_Address extends CordovaPlugin {
 
             callbackContext.success(ipAddress);
             return true;
-        } else  {
+        } else {
             callbackContext.error("Invalid Selection");
             return false;
         }
