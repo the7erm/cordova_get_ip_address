@@ -5,7 +5,6 @@ var getdeviceip = {
 		            "Get_IP_Address",
 		            "get_ip_address",
             []);
-
     },
     get_all_ip: function(successCallback, errorCallback) {
 		cordova.exec( successCallback,

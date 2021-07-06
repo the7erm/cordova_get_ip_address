@@ -3,8 +3,8 @@
 xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.jp.plugins.getipaddress"
     version="1.0.1">
-    <name>Get_IP_Address</name>
-    <description>Get IP Address of Device</description>
+    <name>Get_ALL_IP_Address</name>
+    <description>Get ALL IP Address of Device</description>
     <license>Apache 2.0</license>
     <keywords>cordova,getdeviceip,ipadress,ip,deviceipadress,getipaddress</keywords>
     <repo></repo>
